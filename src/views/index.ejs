@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minor Project : Price History</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Style css -->
+    <link rel="stylesheet" href="/css/style.css">
+
+  
+
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- Navigation section -->
+    <section id="header" class="mb-1">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.jpg" class="img-fluid logo"  alt="Price">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+         
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Featured Products</a>
+              </li>
+              <form class="d-flex" role="search" method="post" action="/search">
+
+                <input class="form-control me-2 searchbar text-center" type="search" placeholder="Enter Product Name" name="searchProduct" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+
+              </form>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+     
+
+    <!-- Home section -->
+    
+  <section id="home" class="home  overflow-hidden">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button> 
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> 
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="home-banner home-banner-1">
+              <div class="home-banner-text">
+                <h1><span style="color:black">Mob</span><span style="color:white">iles</span></h1>                
+                <a href="#" class="btn btn-danger text-uppercase mt-4">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="home-banner home-banner-2">
+              <div class="home-banner-text">
+                <h1>Electronics</h1>
+                
+                <a href="#" class="btn btn-danger text-uppercase mt-4">Explore</a>
+              </div>
+            </div>
+          </div> 
+          <div class="carousel-item">
+            <div class="home-banner home-banner-3">
+              <div class="home-banner-text">
+                <h1 >Home Appliances</h1>               
+                <a href="#" class="btn btn-danger text-uppercase mt-4">Explore</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+            <i class="fa fa-arrow-left slider-icon" aria-hidden="true"></i>
+          </span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            <i class="fa fa-arrow-right slider-icon" aria-hidden="true"></i>
+          </span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      <!-- Offer section -->
+      
+    </section>
+
+ 
+       
+     <!-- Products section -->
+     <section id="products" class="products">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="headline text-center mb-5">
+              <h2 class="pb-3 position-relative d-inline-block">FEATURED PRODUCTS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+         <div class="col-sm-6 col-lg-4 ">
+           <a href="https://www.croma.com/apple-iphone-13-128gb-blue-/p/243463" target="new window" class="d-block text-center mb-4">
+             <div class="product-list">
+               <div class="product-image position-relative"> 
+                    
+                   <img src="images/iphone13.jpg" alt="products" class="img-fluid product-image-first">
+                   <img src="images/iphone 13back.jpg" alt="products" class="img-fluid product-image-secondary"> 
+               </div>
+               <div class="product-name pt-3">
+                 <h3 class="text-capitalize text-white">Apple Iphone 13</h3>
+                 <p class="mb-0 amount">₹63,990.00 <del>₹69,900.00</del></p>
+                
+               </div>
+             </div>
+           </a> 
+           <!-- <div>
+            <form class="d-flex" role="search" method="get" action="/search1">
+            
+            <button class="btn btn-outline-success" type="submit">Analyze Prices</button>
+
+          </form>
+           </div> -->
+         </div>
+         <div class="col-sm-6 col-lg-4">
+           <a href="https://www.croma.com/apple-macbook-pro-2020-m1-14-2-inch-16gb-1tb-macos-monterey-silver-/p/245235" target="new window" class="d-block text-center mb-4">
+             <div class="product-list">
+               <div class="product-image position-relative">  
+                   <img src="/images/macbook.jpg" alt="products" class="img-fluid product-image-first">
+                   <img src="/images/macbook_back.jpg" alt="products" class="img-fluid product-image-secondary"> 
+               </div>
+               <div class="product-name pt-3">
+                 <h3 class="text-capitalize text-white">Apple Macbook Pro</h3>
+                 <p class="mb-0 amount">₹2,19,894.00  <del>₹2,39,900.00</del></p>
+                 
+               </div>
+             </div>
+           </a> 
+           <!-- <div>
+            <form class="d-flex" role="search" method="get" action="/search2">
+            
+            <button class="btn btn-outline-success" type="submit">Analyze Prices</button>
+
+          </form>
+           </div> -->
+         </div>
+         <div class="col-sm-6 col-lg-4">
+           <a href="https://www.croma.com/apple-iphone-13-pro-max-512gb-graphite-/p/243531" target="new window" class="d-block text-center mb-4">
+             <div class="product-list">
+               <div class="product-image position-relative">  
+                   <img src="/images/iphone14.jpg" alt="products" class="img-fluid product-image-first">
+                   <img src="/images/iphone13pro-back.jpg" alt="products" class="img-fluid product-image-secondary"> 
+               </div>
+               <div class="product-name pt-3">
+                 <h3 class="text-capitalize text-white">Apple Iphone 13 Pro</h3>
+                 <p class="mb-0 amount">₹1,59,900.00 </p>
+               </div>
+             </div>
+           </a> 
+           <!-- <div>
+            <form class="d-flex" role="search" method="get" action="/search3">
+            
+            <button class="btn btn-outline-success" type="submit">Analyze Prices</button>
+
+          </form>
+           </div> -->
+         </div>
+         <div class="col-sm-6 col-lg-4">
+           <a href="https://www.croma.com/mi-5x-108-cm-43-inch-4k-ultra-hd-led-android-tv-with-alexa-compatibility-2021-model-/p/242860?utm_source=google&utm_medium=ps&utm_campaign=Sok_Pmax_TV&gclid=Cj0KCQiAic6eBhCoARIsANlox84nnuhgfTa01635H-4SKn-LhzGwZ59wg_VKVyhAEAy2IOhBqMlzAXIaAl_CEALw_wcB" target="new window" class="d-block text-center mb-4" >
+             <div class="product-list">
+               <div class="product-image position-relative">  
+                   <img src="/images/redmitv.jpg" alt="products" class="img-fluid product-image-first">
+                   <img src="/images/redmitv._back.jpg" alt="products" class="img-fluid product-image-secondary"> 
+               </div>
+               <div class="product-name pt-3">
+                 <h3 class="text-capitalize text-white">Redmi Tv 32 Inches</h3>
+                 <p class="mb-0 amount">₹31,999.00 <del>49,999.00</del></p>
+               </div>
+             </div>
+           </a> 
+           <!-- <div>
+            <form class="d-flex" role="search" method="get" action="/search4">
+            
+            <button class="btn btn-outline-success" type="submit">Analyze Prices</button>
+
+          </form>
+           </div> -->
+         </div>
+         <div class="col-sm-6 col-lg-4">
+           <a href="https://www.croma.com/redmi-note-11-6gb-ram-64gb-space-black-/p/248699" target="new window" class="d-block text-center mb-4">
+             <div class="product-list">
+               <div class="product-image position-relative">
+                    
+                   <img src="/images/redminote11main.jpg" alt="products" class="img-fluid product-image-first">
+                   <img src="/images/redminote11.jpg" alt="products" class="img-fluid product-image-secondary"> 
+               </div>
+               <div class="product-name pt-3">
+                 <h3 class="text-capitalize text-white">Redmi Note 11</h3>
+                 <p class="mb-0 amount">₹12,999.00 <del>₹18,999.00</del></p>
+               </div>
+             </div>
+           </a> 
+           <!-- <div>
+            <form class="d-flex" role="search" method="get" action="/search5">
+            
+            <button class="btn btn-outline-success" type="submit">Analyze Prices</button>
+
+          </form>
+           </div> -->
+         </div>
+         <div class="col-sm-6 col-lg-4">
+           <a href="https://www.croma.com/canon-eos-1500d-24-1mp-dslr-camera-18-55-mm-lens-22-3-x-14-9-mm-sensor-digic-4+-image-processor-/p/258420"  target="new window" class="d-block text-center mb-4">
+             <div class="product-list">
+               <div class="product-image position-relative">  
+                   <img src="/images/canoneos1500d.jpg" alt="products" class="img-fluid product-image-first">
+                   <img src="/images/canon.jpg" alt="products" class="img-fluid product-image-secondary"> 
+               </div>
+               <div class="product-name pt-3">
+                 <h3 class="text-capitalize text-white">Canon EOS 1500D </h3>
+                 <p class="mb-0 amount">₹35,990.00 <del>41,995.00</del></p>
+               
+               </div>
+             </div>
+           </a> 
+           <!-- <div>
+            <form class="d-flex" role="search" method="get" action="/search6">
+            
+            <button class="btn btn-outline-success" type="submit">Analyze Prices</button>
+
+          </form>
+           </div> -->
+         </div>
+       </div>
+
+
+      </div>
+    </section>
+    
+    
+  <!-- Footer section -->
+  <footer>
+    <div class="p-3 copyright">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 p-1 p-lg-3 text-center text-lg-start">
+              <p class="my-0">NSUT East Campus <a href="#">PRICE</a> Minor Project</p>
+          </div>
+          <div class="col-12 col-lg-6 p-1 p-lg-3 text-center text-lg-end">
+              <p>Designed by <a href="#" target=" _blank">RVK Team</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+   
+<!-- Scroll Backt To Top --> 
+<div id="scrollUp" title="Scroll To Top">
+  <a href="#home"><span class="ti-arrow-up fs-4 text-white"></span></a>
+</div>
+<!-- Bootstrap 5 js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Main JS -->
+<script src="/js/main.js"></script>
+
+</body>
+</html>
+

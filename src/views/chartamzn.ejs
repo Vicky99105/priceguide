@@ -1,0 +1,188 @@
+<!-- <!doctype html> -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazon Price Chart</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background-image: linear-gradient(to right, #EFC2D7 , #9895EF);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 1000px;
+        padding: 10px;
+        border-radius: 20px;
+        border: solid 3px rgba(54, 162, 235, 1);
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chartMenu">
+      <p>Amazon Price Chart</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+        <!--<button onclick="getData()">Check</button>-->
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    // setup 
+    let prodNameLabel = '<%- prodName %>'; 
+    let oldPriceLabel = '<%- oldPrice %>';
+    let newPriceLabel = '<%- newPrice %>';
+    
+    prodNameLabel = prodNameLabel.split(',');
+    oldPriceLabel = oldPriceLabel.split(',');
+    newPriceLabel = newPriceLabel.split(',');
+    
+    drawChart();
+
+    async function drawChart(){
+        console.log(prodNameLabel + oldPriceLabel);
+        
+        const data = {
+        labels: prodNameLabel,
+        datasets: [{
+            label: 'Old Price',
+            type: 'line',
+            data: oldPriceLabel,
+            backgroundColor: [
+            'rgba(100, 100, 100, 0.5)',
+            'rgba(0, 0, 0, 0.5)',
+            'rgba(80, 159, 64, 0.5)',
+            'rgba(153, 102, 255, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 26, 104, 0.5)',
+            'rgba(255, 99, 71, 0.5)'
+            ],
+            fill : false,
+            borderColor: [
+            'rgba(255, 26, 104, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(0, 0, 0, 1)',
+            ],
+            tension: 0.1
+        },{
+            label: 'New Price',
+            type: 'bar',
+            data: newPriceLabel,
+            backgroundColor: [
+            'rgba(255, 26, 104, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(153, 102, 255, 0.5)',
+            'rgba(80, 159, 64, 0.5)',
+            'rgba(0, 0, 0, 0.5)',
+            'rgba(100, 100, 100, 0.5)',
+
+          ],
+            borderColor: [
+            'rgba(255, 26, 104, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(0, 0, 0, 1)'
+            ]        }]
+        };
+
+        // config 
+        const config = {
+        type: 'line',
+        data,
+        options: {
+            responsive:true,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            scales: {
+            y: {
+              title: {
+                display: true,
+                text: 'Amount ( in Rupees )'
+              },
+              beginAtZero: true
+            },
+            x:{
+              ticks: {
+              	display: false
+              },
+              title: {
+                display: true,
+                text: 'Product Names'
+              },
+            }
+            }
+        }
+        };
+
+        // render init block
+        const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+        );
+    };
+
+    // async function getData(){
+    //     const prodNameLabel = [];
+    //     const oldPriceLabel = [];
+    //     const newPriceLabel = [];
+    //     const ratingLabel = [];
+    //     console.log("abc" + "amznpath")
+    //     const response = await fetch(" amznpath");
+    //     const datapoints = await response.text();
+    //     let flag =false;
+    //     const table = datapoints.split('\n');
+    //     table.forEach(row => {
+    //         if(flag){
+    //           const column = row.split(',');
+    //           //console.log(column);
+    //           const name = column[0];
+    //           const oldPrice = column[1];
+    //           const newPrice = column[2];
+    //           const rating = column[3];
+    //           prodNameLabel.push(name);
+    //           oldPriceLabel.push(oldPrice);
+    //           newPriceLabel.push(newPrice);
+    //           ratingLabel.push(rating);
+    //         }
+    //         flag = true;
+    //     });
+    //     return {prodNameLabel, oldPriceLabel, newPriceLabel, ratingLabel};
+    // }
+    </script>
+
+  </body>
+</html>
